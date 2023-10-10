@@ -32,8 +32,14 @@ const todosApp = {
                 alert("To-do text is required");
             }
         }
+    },
+    beforeCreate() {
+        console.log(this.newtodo);
+    },
+    created() {
+        console.log(this.newtodo);
     }
-};
+}
 
 Vue.createApp(todosApp).mount('#app');
 
