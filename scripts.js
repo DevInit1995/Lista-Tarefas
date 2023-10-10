@@ -33,11 +33,8 @@ const todosApp = {
             }
         }
     },
-    beforeCreate() {
-        console.log(this.newtodo);
-    },
-    created() {
-        console.log(this.newtodo);
+    create() {
+        this.todos = localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : this.todos;
     }
 }
 
