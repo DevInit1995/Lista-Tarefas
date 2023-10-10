@@ -26,6 +26,8 @@ const todosApp = {
                 this.newTodo = {
                     done: false
                 };
+                //local storage 
+                localStorage.setItem("todos", JSON.stringify(this.todos));
             } else {
                 alert("To-do text is required");
             }
